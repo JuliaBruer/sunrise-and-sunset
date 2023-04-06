@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+	width: 100%;
+    height: 100vh;
+}
+
+#bg {
+    background-image: repeating-linear-gradient(0deg, rgba(217,126,46,1), rgba(24,127,154,1));
+}
+
+#sun {
+    width: 170px;
+    height: 170px;
+    background-color:#f5e718;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 100px;
+    left: 100px;
+    animation: sunAnimation 5s ease-in-out infinite;
+    animation-timing-function: linear;
+    filter: blur(5px);
+}
+
+#cloud1 {
+    width: 300px;
+    height: auto;
+    animation: cloud1 15s ease-in-out infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+}
+
+#cloud2 {
+    width: 150px;
+    height: auto;
+    animation: cloud1 25s ease-in-out infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    top: 50px;
+}
+
+#sand {
+    background-color: #dbbe64;
+    width: 100%;
+    height: 200px;
+    filter: blur(20px);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+@keyframes sunAnimation {
+    0% {transform: translate(0px, 0px);}
+    5% {transform: translate(20px, -50px);}
+    10% {transform: translate(50px, -80px);}
+    20% {transform: translate(100px, -120px);}
+    30% {transform: translate(200px, -180px);}
+    40% {transform: translate(300px, -250px);}
+    50% {transform: translate(400px, -300px);}
+    55% {transform: translate(450px, -310px);}
+    60% {transform: translate(500px, -300px);}
+    70% {transform: translate(600px, -250px);}
+    80% {transform: translate(670px, -200px);}
+    90% {transform: translate(720px, -150px);}
+    95% {transform: translate(780px, -50px);}
+    100% {transform: translate(800px, 0px);}
+}
+
+@keyframes cloud1 {
+    0% {transform: translate(0px, 0px);}
+  100% {transform: translate(1000px, 0px);}
+}
